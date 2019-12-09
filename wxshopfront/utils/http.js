@@ -1,4 +1,4 @@
-import {config} from "../pages/config/config";
+import {config} from "../config/config";
 import {Promisic} from "./util";
 
 class Http {
