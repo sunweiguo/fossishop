@@ -1,3 +1,16 @@
 <view>
-    <image class="top-theme" src="{{topTheme.entrance_img}}"/>
+    <!--1、第一个主题-->
+    <image class="top-theme" src="{{themeA.entrance_img}}"/>
+
+    <!--2、轮播图-->
+    <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-color="#157658" circular="true">
+        <!--block只是占位符，没有实际意义，用于这里的Wx:for-->
+        <block wx:for="{{bannerB.items}}">
+            <swiper-item>
+                <image class="swiper" src="{{item.img}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+
 </view>
