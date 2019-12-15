@@ -1,5 +1,5 @@
 const config = {
-    appkey:'ZDhR3KOqXicbTq2v',
+    appkey:'your own key',
     apiBaseUrl:'http://se.7yue.pro/v1/'
 };
 

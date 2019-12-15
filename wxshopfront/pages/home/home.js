@@ -16,7 +16,6 @@ Page({
    */
   onLoad: async function (options) {
     const data = await Theme.getHomeLocationA()
-    console.log(data)
     this.setData({
       topTheme: data[0]
     })
