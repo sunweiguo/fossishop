@@ -12,5 +12,7 @@
         </block>
     </swiper>
 
+    <!--3、宫格-->
+    <s-category-grid grid="{{grid}}"></s-category-grid>
 
 </view>

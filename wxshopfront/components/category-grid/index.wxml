@@ -1,0 +1,15 @@
+<view class="container">
+    <!--不能直接对自定义组件用样式，需要使用外部样式类-->
+    <s-grid row-num="3" l-class="inner-container">
+        <block wx:for="{{grid}}">
+            <s-grid-item key="{{index}}" slot="{{index}}">
+                <view class="grid-item">
+                    <image class="img" src="{{item.img}}"/>
+                    <text class="text">
+                        {{item.title}}
+                    </text>
+                </view>
+            </s-grid-item>
+        </block>
+    </s-grid>
+</view>
