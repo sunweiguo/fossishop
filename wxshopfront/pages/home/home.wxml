@@ -1,4 +1,4 @@
-<view>
+<view class="container">
     <!--1、第一个主题-->
     <image class="top-theme" src="{{themeA.entrance_img}}"/>
 
@@ -14,5 +14,8 @@
 
     <!--3、宫格-->
     <s-category-grid grid="{{grid}}"></s-category-grid>
+
+    <!--4、首页的优惠券活动-->
+    <image src="{{activityD.entrance_img}}" class="activity"></image>
 
 </view>
