@@ -14,7 +14,8 @@ Page({
     themeA:null,
     bannerB:null,
     grid:[],
-    activityD:null
+    activityD:null,
+    themeE:null
   },
 
   /**
@@ -26,15 +27,20 @@ Page({
 
   //初始化首页的数据
   async initAllData() {
-    const themeA = await Theme.getHomeLocationA()
+    /*一次性调出所有的主题数据，以对象的形式保存数据的状态*/
+    const theme = new Theme()
+    await theme.getThemes()
+    const themeA = await theme.getHomeLocationA()
+    const themeE = await theme.getHomeLocationE()
     const bannerB = await Banner.getHomeLocationB()
     const grid = await Category.getGridCategory()
     const activityD = await Activity.getHomeLocationD()
     this.setData({
-      themeA: themeA[0],
-      bannerB: bannerB,
-      grid:grid,
-      activityD:activityD
+      themeA,
+      bannerB,
+      grid,
+      activityD,
+      themeE
     })
   },
 
