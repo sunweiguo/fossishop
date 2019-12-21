@@ -18,4 +18,11 @@
     <!--4、首页的优惠券活动-->
     <image src="{{activityD.entrance_img}}" class="activity"></image>
 
+    <!--5、滑动商品的主题-->
+    <s-spu-scroll
+            theme="{{themeE}}"
+            spu-list="{{themeESpu}}"
+            wx:if="{{themeE.online}}">
+    </s-spu-scroll>
+
 </view>
