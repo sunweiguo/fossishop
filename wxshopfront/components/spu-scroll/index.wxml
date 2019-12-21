@@ -1,0 +1,17 @@
+<view class="container">
+    <image class="title" src="{{theme.title_img}}"></image>
+    <!--为解决下面很大空白问题，再在里面包裹一个大的view，并且去除scroll-view里面的enable-flex属性-->
+    <scroll-view scroll-x class="scroll-view">
+        <view class="inner">
+            <block wx:for="{{spuList}}">
+                <view class="spu-container">
+                    <image src="{{item.img}}" class="spu-img"></image>
+                    <s-price l-value-class="price-value"
+                             l-unit-class="price-unit"
+                             value="{{item.price}}"></s-price>
+                    <text>{{item.title}}</text>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>
