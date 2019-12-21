@@ -1,4 +1,9 @@
 /node_modules
-package-lock.json
-project.config.json
-sitemap.json
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
