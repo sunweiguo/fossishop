@@ -1,4 +1,6 @@
-<view class="container">
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<!--将l-class写在这里，那么外部样式类将作用于整个container，-->
+<view class="container l-class">
     <image class="title" src="{{theme.title_img}}"></image>
     <!--为解决下面很大空白问题，再在里面包裹一个大的view，并且去除scroll-view里面的enable-flex属性-->
     <scroll-view scroll-x class="scroll-view">
@@ -6,10 +8,10 @@
             <block wx:for="{{spuList}}">
                 <view class="spu-container">
                     <image src="{{item.img}}" class="spu-img"></image>
+                    <text class="spu-text">{{item.title.length >=8 ? s.substring(item.title,0,7) + '...':item.title}}</text>
                     <s-price l-value-class="price-value"
                              l-unit-class="price-unit"
                              value="{{item.price}}"></s-price>
-                    <text>{{item.title}}</text>
                 </view>
             </block>
         </view>

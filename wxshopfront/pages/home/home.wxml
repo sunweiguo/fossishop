@@ -20,9 +20,13 @@
 
     <!--5、滑动商品的主题-->
     <s-spu-scroll
+            l-class="spu-scorll"
             theme="{{themeE}}"
             spu-list="{{themeESpu}}"
             wx:if="{{themeE.online}}">
     </s-spu-scroll>
+
+    <!--6、quality-->
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
 
 </view>

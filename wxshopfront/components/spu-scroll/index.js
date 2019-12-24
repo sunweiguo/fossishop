@@ -3,6 +3,8 @@ Component({
   /**
    * 组件的属性列表
    */
+  /*用来接受外部样式的传入*/
+  externalClasses:['l-class'],
   properties: {
     theme:Object,
     spuList:Array

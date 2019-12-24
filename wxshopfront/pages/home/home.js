@@ -16,7 +16,9 @@ Page({
     grid:[],
     activityD:null,
     themeE:null,
-    themeESpu:[]
+    themeESpu:[],
+    themeF:null,
+
   },
 
   /**
@@ -33,6 +35,7 @@ Page({
     await theme.getThemes()
     const themeA = await theme.getHomeLocationA()
     const themeE = await theme.getHomeLocationE()
+    const themeF = await theme.getHomeLocationF()
     let themeESpu = []
     if(themeE.online){
       const data = await Theme.getHomeLocationESpu()
@@ -50,7 +53,8 @@ Page({
       grid,
       activityD,
       themeE,
-      themeESpu
+      themeESpu,
+      themeF,
     })
   },
 

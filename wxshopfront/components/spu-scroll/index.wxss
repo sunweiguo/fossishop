@@ -7,7 +7,7 @@
     height: 90rpx;
 }
 
-.price-value{
+.price-unit{
     font-size: 24rpx !important;
     color: #157658 !important;
 }
@@ -37,4 +37,15 @@
     margin-top: 28rpx;
     display: flex;
     flex-direction: row;
+}
+
+.spu-text{
+    font-size: 20rpx;
+    color: #666;
+    margin-top: 20rpx;
+    /*下面这些样式可以让多出的字段省略显示必须设置宽带无法保证文本的居中*/
+    /*width: 150rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;*/
 }
