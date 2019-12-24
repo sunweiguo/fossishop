@@ -1,3 +1,28 @@
-<view>
-    <image class="top-theme" src="{{topTheme.entrance_img}}"/>
+<view class="container">
+    <!--1、第一个主题-->
+    <image class="top-theme" src="{{themeA.entrance_img}}"/>
+
+    <!--2、轮播图-->
+    <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-color="#157658" circular="true">
+        <!--block只是占位符，没有实际意义，用于这里的Wx:for-->
+        <block wx:for="{{bannerB.items}}">
+            <swiper-item>
+                <image class="swiper" src="{{item.img}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!--3、宫格-->
+    <s-category-grid grid="{{grid}}"></s-category-grid>
+
+    <!--4、首页的优惠券活动-->
+    <image src="{{activityD.entrance_img}}" class="activity"></image>
+
+    <!--5、滑动商品的主题-->
+    <s-spu-scroll
+            theme="{{themeE}}"
+            spu-list="{{themeESpu}}"
+            wx:if="{{themeE.online}}">
+    </s-spu-scroll>
+
 </view>

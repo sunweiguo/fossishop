@@ -1,0 +1,14 @@
+{
+  "name": "wxshopfront",
+  "version": "0.1.0",
+  "description": "微信小程序商城",
+  "main": "app.js",
+  "dependencies": {
+    "lin-ui": "~0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fossi",
+  "license": "ISC"
+}

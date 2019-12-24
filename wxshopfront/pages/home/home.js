@@ -1,6 +1,9 @@
 // pages/home/home.js
 
 import {Theme} from "../../model/theme";
+import {Banner} from "../../model/banner";
+import {Category} from "../../model/category";
+import {Activity} from "../../model/activity";
 
 Page({
 
@@ -8,16 +11,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topTheme:null
+    themeA:null,
+    bannerB:null,
+    grid:[],
+    activityD:null,
+    themeE:null,
+    themeESpu:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    const data = await Theme.getHomeLocationA()
+    this.initAllData()
+  },
+
+  //初始化首页的数据
+  async initAllData() {
+    /*一次性调出所有的主题数据，以对象的形式保存数据的状态*/
+    const theme = new Theme()
+    await theme.getThemes()
+    const themeA = await theme.getHomeLocationA()
+    const themeE = await theme.getHomeLocationE()
+    let themeESpu = []
+    if(themeE.online){
+      const data = await Theme.getHomeLocationESpu()
+      if(data){
+        themeESpu = data.spu_list.slice(0,8)
+      }
+    }
+
+    const bannerB = await Banner.getHomeLocationB()
+    const grid = await Category.getGridCategory()
+    const activityD = await Activity.getHomeLocationD()
     this.setData({
-      topTheme: data[0]
+      themeA,
+      bannerB,
+      grid,
+      activityD,
+      themeE,
+      themeESpu
     })
   },
 
