@@ -1,3 +1,5 @@
+@import "../../wxss/sleeve.wxss";
+
 .container{
     padding: 42rpx 0 34rpx 28rpx;
 }

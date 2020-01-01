@@ -29,4 +29,10 @@
     <!--6、quality-->
     <image src="{{themeF.entrance_img}}" class="quality"></image>
 
+    <!--7、hot-list-->
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <!--8、themeH-->
+    <image src="{{themeH.entrance_img}}" class="fashion"></image>
+
 </view>

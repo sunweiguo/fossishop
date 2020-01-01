@@ -4,7 +4,9 @@
         <block wx:for="{{grid}}">
             <s-grid-item key="{{index}}" slot="{{index}}">
                 <view class="grid-item">
-                    <image class="img" src="{{item.img}}"/>
+                    <view hover-class="medium-hover" hover-stay-time="300">
+                        <image class="img" src="{{item.img}}"/>
+                    </view>
                     <text class="text">
                         {{item.title}}
                     </text>

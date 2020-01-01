@@ -7,7 +7,9 @@
         <view class="inner">
             <block wx:for="{{spuList}}">
                 <view class="spu-container">
-                    <image src="{{item.img}}" class="spu-img"></image>
+                    <view hover-class="small-hover" hover-stay-time="300">
+                        <image src="{{item.img}}" class="spu-img"></image>
+                    </view>
                     <text class="spu-text">{{item.title.length >=8 ? s.substring(item.title,0,7) + '...':item.title}}</text>
                     <s-price l-value-class="price-value"
                              l-unit-class="price-unit"
